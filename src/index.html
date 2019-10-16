@@ -5,10 +5,115 @@
   <title>Portfolio</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!-- carousel -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+
+  
+  <!-- custom style  -->
+  <link rel="stylesheet" href="assets/scss/style.css">
+
+
 </head>
 <body>
   <app-root></app-root>
 </body>
+
+  <!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    // for navbar
+    var offsetTop = $("#about").offset().top;
+    // for titles 
+    var aboutTitle = $("#about").offset().top;
+    var workTitle = $("#work").offset().top;
+
+    $(window).scroll(function(){
+      var scrollTop = $(window).scrollTop();
+
+      if(scrollTop == 0){ 
+        $('.scatter-letter').removeClass('ani-scatter-sort');
+        setTimeout(function(){ $('#1 .scatter-letter').addClass('ani-scatter-sort')}, 2500);
+        setTimeout(function(){ $('#2 .scatter-letter').addClass('ani-scatter-sort')}, 3500);
+        setTimeout(function(){ $('#3 .scatter-letter').addClass('ani-scatter-sort')}, 4500);
+      }
+      // for navbar 
+      if(scrollTop > (offsetTop - 400)){ 
+        $('#navbar').fadeIn();
+      } else {
+        $('#navbar').fadeOut();
+      }
+
+    // for titles 
+      if(scrollTop > (aboutTitle - 500)){
+        $('#about>.title').addClass('ani-title visible');
+        $('#about>.title-underline').addClass('ani-underline visible');
+      } else {
+        $('#about>.title').removeClass('ani-title visible');
+        $('#about>.title-underline').removeClass('ani-underline visible');
+      }
+
+      if(scrollTop > (workTitle - 500)){
+        $('#work>.title').addClass('ani-title visible');
+        $('#work>.title-underline').addClass('ani-underline visible');
+      } else {
+        $('#work>.title').removeClass('ani-title visible');
+        $('#work>.title-underline').removeClass('ani-underline visible');
+      }
+
+    });
+
+    setTimeout(function(){ $('#1 .scatter-letter').addClass('ani-scatter-sort')}, 500);
+    setTimeout(function(){ $('#2 .scatter-letter').addClass('ani-scatter-sort')}, 1500);
+    setTimeout(function(){ $('#3 .scatter-letter').addClass('ani-scatter-sort')}, 2500);
+</script>
+
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- carousel  -->
+<script>   
+
+$('#myCarousel').carousel({
+            interval: false
+        });
+
+        //scroll slides on swipe for touch enabled devices
+
+        $("#myCarousel").on("touchstart", function(event){
+
+            var yClick = event.originalEvent.touches[0].pageY;
+            $(this).one("touchmove", function(event){
+
+                var yMove = event.originalEvent.touches[0].pageY;
+                if( Math.floor(yClick - yMove) > 1 ){
+                    $(".carousel").carousel('next');
+                }
+                else if( Math.floor(yClick - yMove) < -1 ){
+                    $(".carousel").carousel('prev');
+                }
+            });
+            $(".carousel").on("touchend", function(){
+                $(this).off("touchmove");
+            });
+        });
+
+        $('#myCarousel').bind('mousewheel', function(e) {
+    if(e.originalEvent.wheelDelta /120 > 0) {
+        $(this).carousel('next');
+    } else {
+        $(this).carousel('prev');
+    }
+});
+</script>
+
 </html>

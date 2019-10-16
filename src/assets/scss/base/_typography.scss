@@ -1,0 +1,36 @@
+body {
+    font-size:1.6rem;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: $color-1;
+    font-weight:700;
+    text-align: center;
+    margin-top:30px;
+    visibility: hidden;
+
+
+    &-underline {
+        margin: 15px auto 0px;
+        border-top: 5px solid $color-1;
+        width: 100px;
+        height: 150px;
+        visibility: hidden;
+
+    }
+}
+
+.ani-title {
+    animation-name: fromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.ani-underline {
+    animation-name: fromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+}

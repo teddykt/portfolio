@@ -1,0 +1,91 @@
+$breakpoint-sm: 500px;
+$breakpoint-md: 770px;
+$breakpoint-lg: 1024px;
+
+
+
+$font-title: 'Arial';
+$font-subtitle: 'Arial';
+$font-main: 'Arial';
+
+// Theme ----
+
+
+
+$color-base: #030303;
+$color-base-invert: white;
+
+/* Colors */
+$color-1: #002B51;
+$color-1-lighten: lighten($color-1, 15%);
+$color-1-darken: darken($color-1, 5%);
+
+$color-2: #006eaa;
+$color-2-lighten: lighten($color-2, 15%);
+$color-2-darken: darken($color-2, 3%);
+
+$color-3: #66a7cc;
+$color-3-lighten: lighten($color-3, 15%);
+$color-3-darken: darken($color-3, 3%);
+
+
+$color-grey1:#4d4d4f;
+$color-grey2: #e6e7e8;
+$color-grey3: #c5c5c5;
+
+$color-white: #FFF;
+$color-white-t: rgba(255, 255, 255, 0.8);
+
+$color-black: #070909;
+
+$color-green: #5cb85c;
+$color-green-lighten: lighten($color-green, 15%);
+$color-green-darken: darken($color-green, 25%);
+
+$color-red: #d9534f;
+$color-red-lighten: lighten($color-red, 15%);
+$color-red-darken: darken($color-red, 25%);
+
+/*Layout --------------------------*/
+$color-header:#fff;
+$color-body:#fafaf8;
+$color-footer-main:$color-grey1;
+$color-footer-footer: #222;
+$color-login-box: #fcfcfc;
+
+
+
+/*font-color ----------------------------*/
+$color-title: #333;
+$color-outline: $color-grey1;
+
+$color-subtitle: #666;
+
+
+$color-content: #888;
+$color-content-lighten:#999;
+
+/*$color-black: #3c4141 !important;
+$color-red: #ff0000 !important;
+$color-green: #008000 !important*/;
+
+$color-bg: #eef1f5;
+$color-grey-shadow: rgba(0,0,0,.2);
+
+
+/* input --------------*/
+$color-input-font: $color-title;  
+$color-input-bg: $color-white;   
+$color-input-border: #ddd;
+$color-input-border-hover: $color-2;
+$fontsize-input: 16px;
+
+$color-multiselect: $color-white;
+$color-multiselect-bg: $color-2;
+
+
+// Grid 
+$grid-width: 114rem; 
+$gutter-vertical: 8rem; 
+$gutter-vertical-small: 6rem; 
+$gutter-horizontal: 6rem; 

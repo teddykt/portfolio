@@ -1,0 +1,126 @@
+
+.fade-in {
+    height: 150px;
+    width: 1px;
+    opacity: 0;
+    transition: all .75s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    height: 150px;
+    width: 500px;
+}
+@keyframes rotate {
+    
+    
+    50% {
+        transform: rotate(360deg);
+     }
+
+
+}
+
+@keyframes fromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+     }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes fromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+     }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes fromBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-1rem);
+     }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.grow {
+    transition: transform 0.5s ease-in-out;
+}
+.grow:hover {
+    transform: scale(1.04);
+}
+
+// blink light --------------------------------------
+.blink-wrap {
+    .blink {
+        position: absolute;
+        top: 55px;
+        width: 170px;
+        height: 210px;
+        left: 63px;
+        opacity: 0;
+    }
+    &:hover {
+        .blink {
+            animation: blinker 2s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.8;
+    }
+}
+
+// opacity ----------------------------------------
+
+
+.opacity-wrap {
+    opacity: 0.5 !important;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+.opacity-wrap:hover {
+         opacity: 1 !important;
+         -webkit-transition: opacity 1s ease-in-out;
+         -moz-transition: opacity 1s ease-in-out;
+         -ms-transition: opacity 1s ease-in-out;
+         -o-transition: opacity 1s ease-in-out;
+         transition: opacity 1s ease-in-out;
+}
+
+
+// shake -----------------
+.scatter-letter {
+    transition: transform 2s ease-in-out;
+}
+
+  .ani-scatter-sort {
+        transform: translate(0px, 0px) !important;
+}

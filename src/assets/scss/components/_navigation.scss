@@ -1,0 +1,11 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 99999;
+    height: 80px;
+}
+
+#navbar {
+    display: none;
+}

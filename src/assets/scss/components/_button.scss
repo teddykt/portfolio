@@ -1,0 +1,187 @@
+
+.btn {
+    margin: 5px;
+    border-radius: 10px !important;
+    text-transform: none !important;
+    align-self: center;
+    font-weight: 500 !important;
+    font-size: 13px;
+    box-sizing: border-box;
+    min-width: 125px;
+
+    &-sm {
+        min-width: 70px;
+        padding: 3px 10px !important;
+        border-radius: 2px !important;
+    }
+
+    &-first {
+        background-color: $color-2;
+        color: white;
+
+        a {
+            color: white;
+        }
+
+        &:hover {
+            background-color: $color-2-darken;
+            border-color: $color-2-darken;
+            color: white;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    &-second {
+        background-color: $color-2 !important;
+        border-color: $color-2 !important;
+        transition: all .2s !important;
+        min-width: 120px;
+
+        &:hover {
+            background-color: $color-2-darken !important;
+            border-color: $color-2-darken !important;
+            transform: scale(1.08);
+        }
+    }
+
+    &-grey {
+        background-color: $color-subtitle !important;
+        border-color: $color-subtitle !important;
+        transition: all .2s !important;
+        min-width: 120px;
+        color: white;
+
+        &:hover {
+            background-color: $color-grey1 !important;
+            border-color: $color-grey1 !important;
+            transform: scale(1.08);
+        }
+    }
+
+    &-green {
+        background-color: $color-white !important;
+        border-color: $color-green !important;
+        min-width: 120px;
+        color: $color-green !important;
+
+        &:hover {
+            border-color: $color-green-darken !important;
+            color: $color-green-darken !important;
+        }
+    }
+
+    &-red {
+        background-color: $color-white !important;
+        border-color: $color-red !important;
+        min-width: 120px;
+        color: $color-red !important;
+
+        &:hover {
+            border-color: $color-red-darken !important;
+            color: $color-red-darken !important;
+        }
+    }
+}
+
+.btn-revert {
+    margin: unset;
+    border-radius: 10px !important;
+    min-width: unset;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: content-box;
+}
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+.btn-outline-first {
+    border: #bbb 1.4px solid;
+    background-color: white;
+    color: $color-2;
+
+    &:hover {
+        border-color: $color-2-darken;
+    }
+}
+
+.btn-outline-second {
+    border: $color-outline 1.4px solid;
+    background-color: transparent;
+    color: $color-outline;
+
+    &:hover {
+        background-color: $color-2;
+        border-color: $color-2;
+        color: white;
+    }
+}
+
+.btn-outline-cancel {
+    background-color: transparent;
+    color: $color-content;
+    border: $color-content 1.2px solid;
+
+    &:hover {
+        border: $color-outline 1.2px solid;
+        color: $color-outline;
+    }
+}
+
+.btn-group {
+    margin: 5px;
+    .btn:first-child {
+        width: 88px;
+        box-sizing: border-box;
+    }
+}
+
+.btn-none {
+    background: transparent;
+    border: none;
+    outline:none;
+}
+
+
+.btn-small {
+    min-width: initial;
+}
+
+.btn-grow {
+    transition: all .2s !important;
+
+    &:hover {
+        transform: scale(1.06);
+    }
+}
+
+.btn-input {
+    height: 40.69px;
+    margin: 0px;
+    margin-left: 0px !important;
+    border-radius: 0px !important;
+}

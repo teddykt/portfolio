@@ -1,0 +1,215 @@
+
+
+
+.input-validation-error {
+    border-color: red;
+}
+
+.form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    .label-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .control-label {
+            color: $color-content;
+        }
+    }
+    /*.form-control {
+        width: 100%;
+        height: 33.182px;
+        box-sizing: content-box;
+    }*/
+}
+
+.row-sb-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: transparent;
+    width: 100%;
+
+    & > * {
+        width: 49.5%;
+    }
+
+    @media(max-width:767px) {
+        flex-direction: column;
+
+        & > * {
+            width: 100%;
+        }
+    }
+}
+.row-sb-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+
+    & > * {
+        width: 32.66%;
+    }
+
+    @media(max-width:767px) {
+        flex-direction: column;
+
+        .form-group {
+            width: 100%;
+        }
+    }
+}
+
+// kendo input custom --------------------------------------------
+.form-group {
+    .k-textbox, .k-dropdown, .k-datepicker, .k-datetimepicker, .k-numerictextbox, .k-maskedtextbox, .k-numeric-wrap, .k-listbox, .k-upload, .k-multiselect-wrap {
+        width: 100% !important;
+        background-color: $color-input-bg !important;
+        border-color: $color-input-border;
+        color: $color-input-font;
+        font-size: $fontsize-input;
+
+        &:hover, &:focus, &:active {
+            background-color: $color-input-bg !important;
+            border-color: $color-input-border-hover;
+        }
+    }
+    /*multiselect ----------------------------*/
+    .k-multiselect {
+        width: calc(100% - 38.743px);
+
+        &-wrap {
+            .k-i-close {
+                right: -30px;
+            }
+        }
+
+        .k-button {
+            background-color: $color-multiselect-bg;
+            color: $color-multiselect;
+            text-transform: none;
+            font-size: 95%;
+            margin-top: 4px;
+
+            .k-i-close {
+                right: 0px;
+            }
+        }
+    }
+    /*dropdown ----------------------------*/
+    .k-dropdown.k-dropdown-operator {
+        width: 37px !important;
+        font-size: inherit;
+    }
+
+    .k-dropdown .k-state-default {
+        border-color: $color-input-border;
+        background-color: $color-input-bg !important;
+
+        &:hover, &:focus, &:active {
+            background-color: $color-input-bg !important;
+            border-color: $color-input-border-hover;
+        }
+    }
+
+    .k-numeric-wrap {
+        width: unset !important;
+    }
+
+    textarea {
+        padding: 10px;
+        width: calc(100% - 20px);
+        height: 220px;
+    }
+}
+
+
+/*listbox -----------------------------------------------*/
+.k-listbox {
+    max-height: 168px;
+}
+.k-listbox-toolbar {
+    margin: 0px 5px !important;
+}
+
+/* listbox leftside label adjust---*/
+
+label#userRoles {
+    padding: 0 40px 0 0;
+}
+.k-editor {
+    align-self: center;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100% !important;
+    }
+}
+
+
+/* k-upload ----------------*/
+.k-upload {
+    display: flex;
+    flex-direction: column;
+    @media(max-width:540px) {
+        width: 100%;
+    }
+}
+
+/*radio, checkbox -------------------------------------------------*/
+input[type=radio].with-font,
+input[type=checkbox].with-font {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input[type=radio].with-font ~ label:before,
+input[type=checkbox].with-font ~ label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f10c"; /* fa-circle-thin */
+    letter-spacing: 10px;
+    font-size: 1.5em;
+    color: #535353;
+    width: 1.4em; /* reduce bounce */
+    vertical-align: middle;
+}
+
+input[type=radio].with-font:checked ~ label:before,
+input[type=checkbox].with-font:checked ~ label:before {
+    content: "\f05d"; /* fa-check */
+    font-size: 1.5em;
+    color: $color-2;
+    letter-spacing: 5px;
+}
+
+input[type=checkbox].with-font ~ label:before {
+    content: "\f096"; /* fa-square-o */
+    margin-left: -29px;
+}
+
+input[type=checkbox].with-font:checked ~ label:before {
+    content: "\f046"; /* fa-check-square-o */
+    color: $color-2;
+
+}
+
+input[type=radio].with-font:focus ~ label:before,
+input[type=checkbox].with-font:focus ~ label:before,
+input[type=radio].with-font:focus ~ label,
+input[type=checkbox].with-font:focus ~ label {
+    color: $color-2; /* highlight both box and label */
+}
