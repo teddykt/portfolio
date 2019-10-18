@@ -32,7 +32,7 @@ body.slider__body {
 
 .slider__indicators {
   position: fixed;
-  left: 18px;
+  right: 30px;
   top: 50%;
   z-index: 2;
   margin: 0;
@@ -43,13 +43,13 @@ body.slider__body {
 }
 .slider__indicator {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 4px;
+  height: 60px;
   margin: 10px 0;
-  border-radius: 100px;
   background-color: #fff;
   cursor: default;
+  opacity: 0.3;
 }
 .slider__indicator--active {
-  opacity: 0.3;
+  opacity: 1;
 }

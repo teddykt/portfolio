@@ -1,0 +1,205 @@
+
+
+.title-container {
+    position: absolute;
+    bottom: 65%;
+    left: -15%;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+.work-card {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+
+    &-container {
+        width: 55%;
+        height: 30.9375vw;
+        position:relative;
+        margin:auto;
+    }
+
+    &--img {
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &1 {
+            clip-path: polygon(0 0, 70% 0, 30% 100%, 0% 100%);
+        }
+
+        &2 {
+            clip-path: polygon(100% 0, 71% 0, 31% 100%, 100% 100%);
+        }
+    }
+
+    &--title {
+        color: white;
+        position: absolute;
+        font-size: 7rem;
+        max-width: 440px;
+        bottom: 0px;
+        line-height: 7rem;
+        font-weight: 700;
+
+        &__name {
+            margin-left:35px;
+        }
+    }
+}
+
+
+//  custom work classes 
+$color-gatorade: #f94019;
+$color-refreshingly: #3ab3e2;
+$color-budweiser: #C8102E;
+$color-circlek: #081453;
+$color-odacc: #006eaa;
+$color-deskyar: #002f4e;
+
+.gatorade {
+    background: linear-gradient(to top right, #dddddd, rgba($color-gatorade, 0.6));
+}
+.refreshingly {
+    background: linear-gradient(to top right , #dddddd, rgba($color-refreshingly, 0.6));
+}
+.budweiser {
+    background: linear-gradient(to top right , #dddddd, rgba($color-budweiser, 0.6));
+}
+.circlek {
+    background: linear-gradient(to top right , rgba(#b4151c, 0.8), rgba($color-circlek, 0.8));
+}
+.odacc {
+    background: linear-gradient(to top right , #dddddd, rgba($color-odacc, 0.6));
+}
+.deskyar {
+    background: linear-gradient(to top right, rgba($color-deskyar, 1), rgba(#f15a29, 1));
+}
+
+// work imgs 
+.work-card--img {
+    &__gatorade {
+        box-shadow:
+        inset 0 0 6vw  0.4vw $color-gatorade,
+        inset 0 0 1.4vw  0.3vw #222222,
+        inset 0 0 0.5vw  0.2vw #222222;
+
+        &1 {
+            background-image: linear-gradient(to bottom, rgba(#222222, 0.7), rgba($color-gatorade, 0.4)), url("../../assets/img/work/gatorade1.png");
+        }
+        
+        &2 {
+            background-image: linear-gradient(to top,  rgba(#222222, 0.7), rgba($color-gatorade, 0.4)), url("../../assets/img/work/gatorade2.png");
+        }
+
+    }
+
+    &__refreshingly {
+        box-shadow:
+        inset 0 0 6vw  0.4vw $color-refreshingly,
+        inset 0 0 1.4vw  0.3vw #222222,
+        inset 0 0 0.5vw  0.2vw #222222;
+
+        &1 {
+            background-image: linear-gradient(to bottom, rgba(#222222, 0.7), rgba($color-refreshingly, 0.4)), url("../../assets/img/work/refreshingly1.png");
+        }
+        
+        &2 {
+            background-image: linear-gradient(to top,  rgba(#222222, 0.7), rgba($color-refreshingly, 0.4)), url("../../assets/img/work/refreshingly2.png");
+        }
+    }
+    
+    &__budweiser {
+        box-shadow:
+        inset 0 0 6vw  0.4vw $color-budweiser,
+        inset 0 0 1.4vw  0.3vw #222222,
+        inset 0 0 0.5vw  0.2vw #222222;
+
+        &1 {
+            background-image: linear-gradient(to bottom, rgba(#222222, 0.7), rgba($color-budweiser, 0.4)), url("../../assets/img/work/budweiser1.png");
+        }
+        
+        &2 {
+            background-image: linear-gradient(to top,  rgba(#222222, 0.7), rgba($color-budweiser, 0.4)), url("../../assets/img/work/budweiser2.png");
+        }
+    }
+    &__circlek {
+        box-shadow:
+        inset 0 0 6vw  0.4vw $color-circlek,
+        inset 0 0 1.4vw  0.3vw #222222,
+        inset 0 0 0.5vw  0.2vw #222222;
+
+        &1 {
+            background-image: linear-gradient(to bottom, rgba(#b4151c, 0.4), rgba($color-circlek, 0.4)), url("../../assets/img/work/circlek1.png");
+        }
+        
+        &2 {
+            background-image: linear-gradient(to top,  rgba(#b4151c, 0.4), rgba($color-circlek, 0.4)), url("../../assets/img/work/circlek2.png");
+        }
+    }
+    
+    &__odacc {
+        box-shadow:
+        inset 0 0 6vw  0.4vw $color-odacc,
+        inset 0 0 1.4vw  0.3vw #222222,
+        inset 0 0 0.5vw  0.2vw #222222;
+
+        &1 {
+            background-image: linear-gradient(to bottom, rgba(#222222, 0.7), rgba(#002B51, 0.4)), url("../../assets/img/work/odacc1.png");
+        }
+        
+        &2 {
+            background-image: linear-gradient(to top,  rgba(#222222, 0.7), rgba(#002B51, 0.4)), url("../../assets/img/work/odacc2.png");
+        }
+    }
+    
+    &__deskyar {
+        box-shadow:
+        inset 0 0 6vw  0.4vw #939598,
+        inset 0 0 1.4vw  0.3vw #222222,
+        inset 0 0 0.5vw  0.2vw #222222;
+
+        &1 {
+            background-image: linear-gradient(to bottom, rgba(#222222, 0.7), rgba($color-deskyar, 0.4)), url("../../assets/img/work/deskyar1.png");
+        }
+        
+        &2 {
+            background-image: linear-gradient(to top,  rgba(#222222, 0.7), rgba($color-deskyar, 0.4)), url("../../assets/img/work/deskyar2.png");
+        }
+    }
+}
+
+.work-title-underline {
+        width: 150px;
+        height: 7px;
+        margin-top: 5px;
+        visibility: hidden;
+
+        &__gatorade {
+            background-color: $color-gatorade;
+        }
+        &__refreshingly {
+            background-color: $color-refreshingly;
+        }
+        &__budweiser {
+            background-color: $color-budweiser;
+        }
+        &__circlek {
+            background-color: $color-circlek;
+        }
+        &__odacc {
+            background-color: $color-odacc;
+        }
+        &__deskyar {
+            background-color: $color-deskyar;
+        }
+
+}

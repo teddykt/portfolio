@@ -21,6 +21,29 @@
 
 }
 
+.fromLeft {
+    animation-name: fromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+}
+
+.fromLeft-nb {
+    animation-name: fromLeft-nb;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.fromRight {
+    animation-name: fromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.fromBottom {
+    animation-name: fromBottom;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
 @keyframes fromLeft {
     0% {
         opacity: 0;
@@ -35,6 +58,18 @@
         transform: translateX(0);
     }
 }
+
+@keyframes fromLeft-nb {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes fromRight {
     0% {
         opacity: 0;
@@ -52,12 +87,8 @@
 @keyframes fromBottom{
     0% {
         opacity: 0;
-        transform: translateY(10rem);
+        transform: translateY(7rem);
     }
-
-    80% {
-        transform: translateY(-1rem);
-     }
 
     100% {
         transform: translateY(0);

@@ -1,5 +1,22 @@
-var slider = function (sliderElement) {
 
+var slider = function (sliderElement) {
+  whatWheel = 'onwheel' in document.createElement('div') ? 'wheel' : document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
+
+  if(sliderElement =='deslide') {
+    document.body.classList.remove('slider__body');
+    var indicators = document.getElementsByClassName('slider__indicators');
+
+    if(indicators.length) {
+      document.getElementsByClassName('slider__indicators')[0].remove();
+
+      // control scrolling
+        window.addEventListener(whatWheel, function(e){});
+    
+        // allow keyboard input
+        window.addEventListener('keydown', function(e){});
+    }
+    return;
+  }
   var pages = [];
   var currentSlide = 1;
   var isChanging = false;
@@ -11,25 +28,32 @@ var slider = function (sliderElement) {
     document.body.classList.add('slider__body');
 
     // control scrolling
-    whatWheel = 'onwheel' in document.createElement('div') ? 'wheel' : document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
     window.addEventListener(whatWheel, function (e) {
       var direction = e.wheelDelta || e.deltaY;
-      if (direction > 0) {
-        changeSlide(-1);
-      } else {
-        changeSlide(1);
+
+      if(window.location.href.indexOf("work") > -1) {
+        if (direction > 0) {
+          changeSlide(-1);
+        } else {
+          changeSlide(1);
+        }
       }
+
     });
 
     // allow keyboard input
     window.addEventListener('keydown', function (e) {
-      if (keyUp[e.keyCode]) {
-        changeSlide(-1);
-      } else if (keyDown[e.keyCode]) {
-        changeSlide(1);
+      if(window.location.href.indexOf("work") > -1) {
+        if (keyUp[e.keyCode]) {
+          changeSlide(-1);
+        } 
+        else if (keyDown[e.keyCode]) {
+          changeSlide(1);
+        }
       }
     });
 
+    
     // page change animation is done
     detectChangeEnd() && document.querySelector(sliderElement).addEventListener(detectChangeEnd(), function () {
       if (isChanging) {
@@ -120,6 +144,7 @@ var slider = function (sliderElement) {
   // handle page/section change
   var changeSlide = function (direction) {
 
+
     // already doing it or last/first page, staph plz
     if (isChanging || (direction == 1 && currentSlide == pages.length) || (direction == -1 && currentSlide == 1)) {
       return;
@@ -135,6 +160,19 @@ var slider = function (sliderElement) {
     // change dots
     document.querySelector('a.slider__indicator--active').classList.remove('slider__indicator--active');
     document.querySelector('a[data-slider-target-index="' + currentSlide +'"]').classList.add('slider__indicator--active');
+
+    // for work-card title 
+    var titles = document.getElementsByClassName('work-card--title');
+    document.getElementById('ul' + currentSlide).classList.remove('fromLeft-nb', 'visible');
+    function removeTitle() {
+      for (i = 0; i < titles.length; i++) { 
+        var e = titles[i];
+        e.classList.remove('fromBottom', 'visible');
+      }
+    }
+    removeTitle();
+    document.getElementById('workTitle' + currentSlide).classList.add('fromBottom', 'visible');
+    setTimeout(function(){ document.getElementById('ul' + currentSlide).classList.add('fromLeft-nb', 'visible')}, 1400);
   };
 
   // go to spesific slide if it exists
@@ -165,3 +203,17 @@ var slider = function (sliderElement) {
     gotoSlide: gotoSlide
   }
 };
+
+function desliser() {
+  document.body.classList.remove('slider__body');
+    var indicators = document.getElementsByClassName('slider__indicators');
+    if(indicators.length) {
+      document.getElementsByClassName('slider__indicators')[0].remove();
+
+      // control scrolling
+        window.removeEventListener(whatWheel, test1);
+    
+        // allow keyboard input
+        window.removeEventListener('keydown', test2);
+    }
+}

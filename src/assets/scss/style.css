@@ -24,6 +24,30 @@ $color-green: #008000 !important*/
     transform: rotate(360deg);
   }
 }
+.fromLeft {
+  animation-name: fromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.fromLeft-nb {
+  animation-name: fromLeft-nb;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.fromRight {
+  animation-name: fromRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.fromBottom {
+  animation-name: fromBottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
 @keyframes fromLeft {
   0% {
     opacity: 0;
@@ -31,6 +55,15 @@ $color-green: #008000 !important*/
   }
   80% {
     transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fromLeft-nb {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
   }
   100% {
     transform: translateX(0);
@@ -51,10 +84,7 @@ $color-green: #008000 !important*/
 @keyframes fromBottom {
   0% {
     opacity: 0;
-    transform: translateY(10rem);
-  }
-  80% {
-    transform: translateY(-1rem);
+    transform: translateY(7rem);
   }
   100% {
     transform: translateY(0);
@@ -150,6 +180,8 @@ body {
   text-align: center;
   margin-top: 30px;
   visibility: hidden;
+  width: 50vw;
+  margin: 30px auto 0;
 }
 .title-underline {
   margin: 15px auto 0px;
@@ -157,18 +189,6 @@ body {
   width: 100px;
   height: 150px;
   visibility: hidden;
-}
-
-.ani-title {
-  animation-name: fromLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-
-.ani-underline {
-  animation-name: fromRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
 }
 
 .container-fluid {
@@ -1658,6 +1678,158 @@ input[type=checkbox].with-font:focus ~ label {
 }
 .list-element:not(:last-child) {
   margin-right: 15px;
+}
+
+.title-container {
+  position: absolute;
+  bottom: 65%;
+  left: -15%;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.work-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.work-card-container {
+  width: 55%;
+  height: 30.9375vw;
+  position: relative;
+  margin: auto;
+}
+.work-card--img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.work-card--img1 {
+  clip-path: polygon(0 0, 70% 0, 30% 100%, 0% 100%);
+}
+.work-card--img2 {
+  clip-path: polygon(100% 0, 71% 0, 31% 100%, 100% 100%);
+}
+.work-card--title {
+  color: white;
+  position: absolute;
+  font-size: 7rem;
+  max-width: 440px;
+  bottom: 0px;
+  line-height: 7rem;
+  font-weight: 700;
+}
+.work-card--title__name {
+  margin-left: 35px;
+}
+
+.gatorade {
+  background: linear-gradient(to top right, #dddddd, rgba(249, 64, 25, 0.6));
+}
+
+.refreshingly {
+  background: linear-gradient(to top right, #dddddd, rgba(58, 179, 226, 0.6));
+}
+
+.budweiser {
+  background: linear-gradient(to top right, #dddddd, rgba(200, 16, 46, 0.6));
+}
+
+.circlek {
+  background: linear-gradient(to top right, rgba(180, 21, 28, 0.8), rgba(8, 20, 83, 0.8));
+}
+
+.odacc {
+  background: linear-gradient(to top right, #dddddd, rgba(0, 110, 170, 0.6));
+}
+
+.deskyar {
+  background: linear-gradient(to top right, #002f4e, #f15a29);
+}
+
+.work-card--img__gatorade {
+  box-shadow: inset 0 0 6vw 0.4vw #f94019, inset 0 0 1.4vw 0.3vw #222222, inset 0 0 0.5vw 0.2vw #222222;
+}
+.work-card--img__gatorade1 {
+  background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(249, 64, 25, 0.4)), url("../../assets/img/work/gatorade1.png");
+}
+.work-card--img__gatorade2 {
+  background-image: linear-gradient(to top, rgba(34, 34, 34, 0.7), rgba(249, 64, 25, 0.4)), url("../../assets/img/work/gatorade2.png");
+}
+.work-card--img__refreshingly {
+  box-shadow: inset 0 0 6vw 0.4vw #3ab3e2, inset 0 0 1.4vw 0.3vw #222222, inset 0 0 0.5vw 0.2vw #222222;
+}
+.work-card--img__refreshingly1 {
+  background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(58, 179, 226, 0.4)), url("../../assets/img/work/refreshingly1.png");
+}
+.work-card--img__refreshingly2 {
+  background-image: linear-gradient(to top, rgba(34, 34, 34, 0.7), rgba(58, 179, 226, 0.4)), url("../../assets/img/work/refreshingly2.png");
+}
+.work-card--img__budweiser {
+  box-shadow: inset 0 0 6vw 0.4vw #C8102E, inset 0 0 1.4vw 0.3vw #222222, inset 0 0 0.5vw 0.2vw #222222;
+}
+.work-card--img__budweiser1 {
+  background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(200, 16, 46, 0.4)), url("../../assets/img/work/budweiser1.png");
+}
+.work-card--img__budweiser2 {
+  background-image: linear-gradient(to top, rgba(34, 34, 34, 0.7), rgba(200, 16, 46, 0.4)), url("../../assets/img/work/budweiser2.png");
+}
+.work-card--img__circlek {
+  box-shadow: inset 0 0 6vw 0.4vw #081453, inset 0 0 1.4vw 0.3vw #222222, inset 0 0 0.5vw 0.2vw #222222;
+}
+.work-card--img__circlek1 {
+  background-image: linear-gradient(to bottom, rgba(180, 21, 28, 0.4), rgba(8, 20, 83, 0.4)), url("../../assets/img/work/circlek1.png");
+}
+.work-card--img__circlek2 {
+  background-image: linear-gradient(to top, rgba(180, 21, 28, 0.4), rgba(8, 20, 83, 0.4)), url("../../assets/img/work/circlek2.png");
+}
+.work-card--img__odacc {
+  box-shadow: inset 0 0 6vw 0.4vw #006eaa, inset 0 0 1.4vw 0.3vw #222222, inset 0 0 0.5vw 0.2vw #222222;
+}
+.work-card--img__odacc1 {
+  background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(0, 43, 81, 0.4)), url("../../assets/img/work/odacc1.png");
+}
+.work-card--img__odacc2 {
+  background-image: linear-gradient(to top, rgba(34, 34, 34, 0.7), rgba(0, 43, 81, 0.4)), url("../../assets/img/work/odacc2.png");
+}
+.work-card--img__deskyar {
+  box-shadow: inset 0 0 6vw 0.4vw #939598, inset 0 0 1.4vw 0.3vw #222222, inset 0 0 0.5vw 0.2vw #222222;
+}
+.work-card--img__deskyar1 {
+  background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(0, 47, 78, 0.4)), url("../../assets/img/work/deskyar1.png");
+}
+.work-card--img__deskyar2 {
+  background-image: linear-gradient(to top, rgba(34, 34, 34, 0.7), rgba(0, 47, 78, 0.4)), url("../../assets/img/work/deskyar2.png");
+}
+
+.work-title-underline {
+  width: 150px;
+  height: 7px;
+  margin-top: 5px;
+  visibility: hidden;
+}
+.work-title-underline__gatorade {
+  background-color: #f94019;
+}
+.work-title-underline__refreshingly {
+  background-color: #3ab3e2;
+}
+.work-title-underline__budweiser {
+  background-color: #C8102E;
+}
+.work-title-underline__circlek {
+  background-color: #081453;
+}
+.work-title-underline__odacc {
+  background-color: #006eaa;
+}
+.work-title-underline__deskyar {
+  background-color: #002f4e;
 }
 
 /*# sourceMappingURL=style.css.map */

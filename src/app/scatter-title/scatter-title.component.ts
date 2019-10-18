@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-scatter-title',
   templateUrl: './scatter-title.component.html',
@@ -9,6 +9,9 @@ export class ScatterTitleComponent implements OnInit {
 
   @Input()
   content: string;
+  
+  @Input()
+  time: number;
 
   letters: string[] = [];
 
@@ -36,12 +39,13 @@ export class ScatterTitleComponent implements OnInit {
     const styles = { 'transform' : 'translate(' + random1 + 'vw,' + random2 + 'vh)'};
     return styles;
   }
-
   constructor() { }
 
   ngOnInit() {
-  this.letters = this.getChars(this.content);
+  var time = this.time;
+  this.letters = this.getChars(this.content);    
 
+    setTimeout(function(){ $('#' + time +' .scatter-letter').addClass('ani-scatter-sort')}, time * 1000);
   }
 
 }

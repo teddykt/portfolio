@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScatterTitleComponent } from './scatter-title/scatter-title.component';
+import { WorkCardComponent } from './work-card/work-card.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ScatterTitleComponent } from './scatter-title/scatter-title.component';
     ContactComponent,
     HeaderComponent,
     FooterComponent,
-    ScatterTitleComponent
+    ScatterTitleComponent,
+    WorkCardComponent
   ],
   imports: [
     BrowserModule,
